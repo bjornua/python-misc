@@ -33,11 +33,6 @@ class Index(object):
     def insert(self, x):
         self.list.insert(self._bisect_right(self.key(x)), x)
     
-    def __contains__(self, item):
-        i = self._bisect_left(self.key(item))
-        j = self._bisect_right(self.key(item))
-        return item in self.list[i:j]
-    
     def index(self, item):
         i = self._bisect_left(self.key(item))
         j = self._bisect_right(self.key(item))
