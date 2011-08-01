@@ -1,6 +1,10 @@
 #!/usr/bin/python2 -B
 # -*- coding: utf-8 -*-
 
+# Reeally consider using a binary tree instead. Lists are
+# internally represented as arrays in CPython. Insertions
+# runs in linear time for now :\
+
 class Index(object):
     def __init__(self, iterable=(), key=None, cmp_=None):
         self.key = key or (lambda x: x)
